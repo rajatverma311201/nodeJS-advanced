@@ -3,7 +3,11 @@ const { MyCustomEventEmitter } = require("./my-custom-event-emitter");
 myEvent = new MyCustomEventEmitter();
 
 myEvent.on("myEvent", (data) => {
-    console.log("Event triggered with data:", data);
+    console.log("first myEvent   |  Event triggered with data:", data);
+});
+
+myEvent.on("myEvent", (data) => {
+    console.log("second myEvent  |  Event triggered with data:", data);
 });
 
 myEvent.emit("myEvent", "outer");
