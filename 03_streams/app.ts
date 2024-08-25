@@ -10,7 +10,7 @@ async function main() {
     const writerStream = fileHandler.createWriteStream();
 
     console.time("writeStream");
-    for (let i = 0; i < 10_00_000_0; i++) {
+    for (let i = 0; i < 10_00_000; i++) {
         const buf = Buffer.from(` ${i} `);
 
         writerStream.write(buf);
